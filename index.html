@@ -4,16 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>POO - Javascript</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="js/script1.js"></script>
   </head>
-  <body>
-    <div class="card">
-      <h1>Controle de Produtos</h1>
 
-      <button onclick="produto.salvar()">Salvar</button>
-      <button onclick="produto.excluir()">Deletar</button>
-    </div>
+  <body>
+    <header>
+      <h1>Minha Loja 1.0</h1>
+    </header>
+
+    <main>
+      <div class="title">
+        <h2>Produtos</h2>
+        <span>Lista de produtos da minha loja</span>
+      </div>
+
+      <div class="card">
+        <div class="lineIput">
+          <label>Produto</label>
+          <input type="text" id="produto" placeholder="Nome do Produto" />
+        </div>
+
+        <div class="lineIput">
+          <label>Preço</label>
+          <input type="text" id="preco" placeholder="Valor do Produto" />
+        </div>
+
+        <button onclick="produto.salvar()">Salvar</button>
+        <button onclick="produto.cancelar()">Cancelar</button>
+      </div>
+
+      <div class="content">
+        <table>
+          <thead>
+            <th class="center">ID</th>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th class="center">Ações</th>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </main>
   </body>
 </html>
